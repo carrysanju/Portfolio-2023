@@ -1,0 +1,5 @@
+git confit --global user.name "sanjog"
+git confit --global user.email "email"
+git add .
+    git commit -m "----"
+        git push

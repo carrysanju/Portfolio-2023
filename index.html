@@ -7,5 +7,34 @@
 </head>
 <body>
     <h1>Sanjog Prasad</h1>
+    <div>
+		<h1 >All Projects</h1>
+		<ul>
+			<li><a id="profile-card" target="_blank">Profile Card</a></li>
+		</ul>
+	</div>
+
+		<script>
+			var isDevelopment = false; // Change this to false for production
+
+			var baseURL = isDevelopment ? '/portfolio-2023/' : 'http://localhost:3000/';
+
+			// Now you can use baseURL to construct your links
+			var profilecardPageURL = baseURL + 'Profile Card/index.html';
+					// Get all <li> elements
+			var listItems = document.querySelectorAll('ul li');
+
+			// Iterate through each <li> element
+			listItems.forEach(function (li) {
+				// Find the <a> element inside the current <li>
+				var anchorElement = li.querySelector('a');
+
+				// If an <a> element is found, update its href attribute
+				switch (anchorElement.id) {
+					case 'profile-card':
+						document.querySelector('#profile-card').setAttribute('href', profilecardPageURL);
+                }
+			});
+		</script>
 </body>
 </html>
